@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addition Practice</title>
+    <link rel="icon" type="image/png" href="/resources/images/renci-icon.png" sizes="152x152" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/resources/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+        integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/request.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="heading">
+            <h2><strong>Subject:</strong> Addition</h2>
+            <div id="operation-container">
+                <div class="operations">
+                    <p>+</p>
+                </div>
+                <div class="operations">
+                    <p>-</p>
+                </div>
+                <div class="operations">
+                    <p>&times;</p>
+                </div>
+                <div class="operations">
+                    <p>&divide;</p>
+                </div>
+            </div>
+        </div>
+        <h2 id='instructions'>Add!</h2>
+        <div id="equation">
+            <h1>
+                <span id="first-number"></span> + <span id="second-number"></span> =
+            </h1>
+            <input type="text" id="user-input" onkeypress="clickPress(event)" />
+            <h2 class="right" id="check">&#10003;</h2>
+            <h2 class="wrong" id="wrong">&#10006;</h2>
+        </div>
+        <button type="button" id="check-answer-btn" class="btn btn-primary" onclick="evaluated();">
+            Check Answer
+        </button>
+
+        <div id="score-container">
+            <h1 id=score>0</h1>
+            <h3>Score</h3>
+        </div>
+    </div>
+    <!-- Hidden -->
+    <h1 class="right" id="praise">Great Job!</h1>
+    <h1 class="wrong" id="start-over">Incorrect! Start Over!</h1>
+    <h1 id="winner-message">Congrats! You Won!</h1>
+    <img id="winner-confetti" src="/resources/images/confetti.png" alt="">
+    <button id="new-game" class="btn btn-success" onclick="resetScore();">New Game</button>
+
+</body>
+
+</html>

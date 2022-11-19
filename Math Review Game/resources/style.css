@@ -1,0 +1,333 @@
+:root{
+    --teal: #348da9;
+    --light-blue: #48b5f6;
+    --accent-orange: #f3765a;
+    --dark-blue: #0d2329;
+    --warning: #E4DE25;
+    --success: #7CF331;
+    --error: #DA4343;
+      
+}
+
+*{
+    font-weight: 600px;
+}
+
+#instructions{
+    padding-top: 40px;
+}
+
+#heading{
+    background-color: var(--accent-orange);
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    border-bottom: 2px solid var(--dark-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#operation-container{
+    width: 25%;
+    padding: 20px;
+    display: flex;
+
+}
+
+.operations{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background: var(--dark-blue);
+    color: var(--accent-orange);
+    font-size: 2em;
+    opacity: 0.8;
+}
+
+.operations:hover{
+    cursor: pointer;
+}
+
+#heading h2{
+    padding: 20px;
+    color: var(--dark-blue);
+    margin-bottom: 0px;
+}
+
+body{
+    background-color: var(--dark-blue);
+    background-image: url('/resources/images/addition.jpg');
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#equation{
+    text-align: center;
+    margin: 5vh
+}
+
+input{
+    width: 5vw;
+    height: 10vh;
+    margin: 5vh;
+    font-size: 40px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height:95vh;
+    width: 60vw;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0px;
+    border: 5px solid var(--dark-blue);
+    opacity: 0.95;
+    z-index: 1;
+}
+
+#score-container{
+    border: 2px solid black;
+    width: 10vw;
+    text-align: center;
+    margin: 8vh;
+    padding: 20px;
+}
+
+#equation{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: center;
+}
+
+#equation h1{
+    font-size: 70px;
+}
+
+#check-answer-btn{
+    padding: 10px 20px 10px 20px;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 50px;;;
+}
+
+.right{
+    color: var(--success);
+}
+
+.wrong{
+    color: var(--error);
+
+}
+
+#praise{
+    font-size: 60px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    display: none;
+}
+
+#start-over{
+    font-size: 60px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    display: none;
+
+}
+
+    #check, #wrong, #winner-confetti, #winner-message, #new-game {
+        display: none;
+    }
+
+    #winner-message, #winner-confetti, #new-game{
+        z-index: 11;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    #winner-message{
+        font-size: 100px;
+        width: 100%;
+        height: 50%;
+        background-color: var(--dark-blue);
+        color: var(--light-blue);
+        margin-top: 40px;
+    }
+
+    #winner-confetti{
+        width: 200px;
+        margin-top: 40px;
+    }
+
+    #new-game{
+        width: 10%;
+        height: 5%;
+        margin-top: 18%;
+        
+    }
+
+    @media (max-width: 1440px){
+        #new-game{
+            margin-top: 25%;
+            
+        }
+    }
+
+
+@media (max-width: 1024px){
+    #equation{
+        padding: 5px;
+    }
+     #operation-container {
+            width: 45%;
+        }
+
+    #score-container{
+        width: 15vw;
+        margin: 8vh;
+        padding: 20px;
+    }
+
+    #user-input{
+        width: 8vw;
+    }
+
+    #new-game{
+        width: 15%;
+        margin-top: 35%;
+        
+    }
+}
+
+@media (max-width: 768px){
+    #equation{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;;
+    }
+    #user-input{
+        width: 8vw;
+        height: 8vh;
+    }
+
+    #equation h1 {
+        font-size: 50px;
+    }
+
+     #operation-container {
+        width: 65%;
+        padding: 0px;
+        padding-right: 10px;
+    }
+
+    #score-container{
+        padding: 10px;
+    }
+
+    #user-input{
+        width: 8vw;
+    }
+
+    #praise, #start-over{
+        font-size: 40px;
+    }
+
+    #new-game{
+        width: 15%;
+        margin-top: 45%;
+        
+    }
+
+    #winner-message{
+        font-size: 80px;
+    }
+
+    #winner-confetti{
+        padding-bottom: 5%
+    }
+}
+
+@media (max-width: 425px){
+    .container{
+        width: 98%;
+    }
+    #score-container{
+        width: 40%;
+    }
+    #user-input{
+        width: 12vw;
+        height: 7vh;
+        font-size: 30px;
+    }
+    #new-game{
+        width: 35%;
+        margin-top: 80%;
+    }
+    
+    #winner-message{
+        font-size: 55px;
+    }
+
+    #winner-confetti{
+        padding-bottom: 5%
+    }
+}
+
+@media (max-width: 320px){
+    .container{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    #heading{
+        border-radius: 0px;
+        height: 18%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    #equation h1 {
+        font-size: 40px;
+    }
+    #praise, #start-over{
+        padding-top: 50px;
+        font-size: 40px;
+    }
+    #user-input{
+        font-size: 20px;
+        margin: 20px;
+    }
+    #new-game{
+        margin-top: 95%;
+    }
+    
+
+}
